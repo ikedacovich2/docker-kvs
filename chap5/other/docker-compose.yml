@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  python:
+    image: alpine:3.10.3
+    container_name: alpine
+    command: ["tail", "-f", "/dev/null"]
+    tty: true
+    env_file: python.env
+    stop_signal: SIGKILL
+    network_mode: "none"
